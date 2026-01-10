@@ -106,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 
     .contact-btn:hover {
         background: var(--primary-red-dark);
+        color: var(--white) !important;
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
     }
