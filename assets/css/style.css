@@ -997,7 +997,7 @@ h1, h2, h3, h4, h5, h6 {
     .partner-logo img {
         max-width: 100%;
         max-height: 60px;
-        filter: grayscale(100%);
+        /*filter: grayscale(100%);*/
         transition: all 0.3s ease;
     }
 
