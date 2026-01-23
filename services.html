@@ -1,0 +1,849 @@
+﻿<!-- services.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Mudra Junction | Financial Solutions</title>
+
+    <!-- Bootstrap 5.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Your existing styles -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Additional styles for services page */
+        .product-hero {
+            /* background: linear-gradient(rgba(211, 47, 47, 0.9), rgba(183, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center; */
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .product-detail-section {
+            padding: 100px 0;
+        }
+
+        .product-tabs {
+            position: sticky;
+            top: 100px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .product-tab {
+            display: block;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            background: rgba(211, 47, 47, 0.05);
+            border-left: 4px solid transparent;
+            border-radius: 8px;
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .product-tab:hover,
+        .product-tab.active {
+            background: rgba(211, 47, 47, 0.1);
+            border-left-color: var(--primary-red);
+            color: var(--primary-red);
+            transform: translateX(5px);
+        }
+
+        .product-content {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+
+        .product-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            padding: 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--red-grad);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .eligibility-box {
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, rgba(245, 124, 0, 0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .document-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .document-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .document-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+
+        .comparison-table th {
+            background: var(--primary-red);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: rgba(211, 47, 47, 0.05);
+        }
+
+        .faq-section {
+            background: var(--light-gray);
+            padding: 100px 0;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            color: var(--dark-gray);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+
+        .faq-item.active .faq-question {
+            background: rgba(211, 47, 47, 0.05);
+            color: var(--primary-red);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-placeholder">
+                    <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-md-center align-items-start pt-3 pt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">Calculate EMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Hero -->
+    <section class="product-hero hero-section">
+        <div class="container">
+            <h1 class="hero-title mb-4">Comprehensive Financial Solutions</h1>
+            <p class="hero-subtitle mb-0" style="color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
+                Tailored loan products designed to meet your specific financial needs with competitive rates and
+                flexible terms
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Navigation -->
+    <section class="product-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="product-tabs">
+                        <a href="#home-loans" class="product-tab active">
+                            <i class="fas fa-home me-2"></i> Home Loans
+                        </a>
+                        <a href="#business-loans" class="product-tab">
+                            <i class="fas fa-briefcase me-2"></i> Business Loans
+                        </a>
+                        <a href="#lap" class="product-tab">
+                            <i class="fas fa-university me-2"></i> Loan Against Property
+                        </a>
+                        <a href="#personal-loans" class="product-tab">
+                            <i class="fas fa-user-tie me-2"></i> Personal Loans
+                        </a>
+                        <a href="#balance-transfer" class="product-tab">
+                            <i class="fas fa-exchange-alt me-2"></i> Balance Transfer
+                        </a>
+                        <a href="#affordable-housing" class="product-tab">
+                            <i class="fas fa-building me-2"></i> Affordable Housing
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <!-- Home Loans -->
+                    <div id="home-loans" class="product-content">
+                        <h2 class="mb-4">Home Loans</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Competitive interest rates and convenient EMIs to help you own your dream home.
+                        </p>
+
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <h5>Competitive Rates</h5>
+                                <p class="mb-0">Starting from 8.5% p.a. with flexible repayment options</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Quick Processing</h5>
+                                <p class="mb-0">Fast approval within 48-72 hours with minimal documentation</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-rupee-sign"></i>
+                                </div>
+                                <h5>High Loan Amount</h5>
+                                <p class="mb-0">Up to 90% of property value for first-time buyers</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h5>Long Tenure</h5>
+                                <p class="mb-0">Repayment period up to 30 years for comfortable EMIs</p>
+                            </div>
+                        </div>
+
+                        <div class="eligibility-box">
+                            <h4 class="mb-3">Eligibility Criteria</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>Salaried individuals (age 21-60 years)</li>
+                                        <li>Self-employed professionals (age 25-65 years)</li>
+                                        <li>Minimum income: ₹25,000 per month</li>
+                                        <li>Minimum work experience: 2 years</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>CIBIL score above 650</li>
+                                        <li>Property should be in approved locations</li>
+                                        <li>Valid identity and address proof</li>
+                                        <li>Income proof documents</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h4 class="mb-3">Why Choose Our Home Loans?</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="document-list">
+                                    <li>Special schemes for first-time home buyers</li>
+                                    <li>Balance transfer facility from other lenders</li>
+                                    <li>Top-up loans available</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="document-list">
+                                    <li>No prepayment charges after 1 year</li>
+                                    <li>Insurance options available</li>
+                                    <li>Dedicated relationship manager</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Loans -->
+                    <div id="business-loans" class="product-content" style="display: none;">
+                        <h2 class="mb-4">Business Loans</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Financing solutions for startups, working capital, and business expansion.
+                        </p>
+
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Loan Type</th>
+                                    <th>Loan Amount</th>
+                                    <th>Interest Rate</th>
+                                    <th>Tenure</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Startup Business Loan</td>
+                                    <td>Up to ₹50 Lakhs</td>
+                                    <td>12% - 16% p.a.</td>
+                                    <td>Up to 5 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Working Capital Loan</td>
+                                    <td>Up to ₹2 Crores</td>
+                                    <td>11% - 14% p.a.</td>
+                                    <td>1-3 years</td>
+                                </tr>
+                                <tr>
+                                    <td>Business Expansion Loan</td>
+                                    <td>Up to ₹5 Crores</td>
+                                    <td>10% - 13% p.a.</td>
+                                    <td>Up to 7 years</td>
+                                </tr>
+                                <tr>
+                                    <td>MSME Loan</td>
+                                    <td>Up to ₹1 Crore</td>
+                                    <td>10.5% - 14.5% p.a.</td>
+                                    <td>Up to 5 years</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="eligibility-box">
+                            <h4 class="mb-3">Key Features</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>Collateral-free loans up to ₹50 Lakhs</li>
+                                        <li>Quick disbursement within 72 hours</li>
+                                        <li>Flexible repayment options</li>
+                                        <li>Minimal documentation</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>No hidden charges</li>
+                                        <li>Online application process</li>
+                                        <li>Special schemes for women entrepreneurs</li>
+                                        <li>Balance transfer facility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loan Against Property -->
+                    <div id="lap" class="product-content" style="display: none;">
+                        <h2 class="mb-4">Loan Against Property</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Unlock the value of your property without selling it. Flexible terms for both residential
+                            and commercial properties.
+                        </p>
+
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-home"></i>
+                                </div>
+                                <h5>Property Types</h5>
+                                <p class="mb-0">Residential, commercial, industrial, and land</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <h5>Loan Amount</h5>
+                                <p class="mb-0">Up to 70% of property market value</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Tenure</h5>
+                                <p class="mb-0">Up to 15 years repayment period</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <h5>Interest Rate</h5>
+                                <p class="mb-0">Starting from 10.5% p.a. (floating)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Loans -->
+                    <div id="personal-loans" class="product-content" style="display: none;">
+                        <h2 class="mb-4">Personal Loans</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Quick access to funds with minimal documentation. Perfect for medical emergencies,
+                            education, or travel needs.
+                        </p>
+
+                        <div class="eligibility-box">
+                            <h4 class="mb-3">Features & Benefits</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>Loan amount: ₹50,000 to ₹25 Lakhs</li>
+                                        <li>Interest rate: 11% - 18% p.a.</li>
+                                        <li>Tenure: 1 to 5 years</li>
+                                        <li>Quick processing: 24-48 hours</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>No collateral required</li>
+                                        <li>Flexible repayment options</li>
+                                        <li>Online application available</li>
+                                        <li>End-to-end digital process</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Balance Transfer -->
+                    <div id="balance-transfer" class="product-content" style="display: none;">
+                        <h2 class="mb-4">Balance Transfer</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Transfer your existing loans to us for better interest rates and improved repayment terms.
+                            Reduce your EMI burden.
+                        </p>
+
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                </div>
+                                <h5>Lower Interest Rates</h5>
+                                <p class="mb-0">Save up to 2% on your current loan interest</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-calendar-minus"></i>
+                                </div>
+                                <h5>Reduced EMI</h5>
+                                <p class="mb-0">Lower your monthly EMI by 10-20%</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h5>Quick Processing</h5>
+                                <p class="mb-0">Balance transfer within 5-7 working days</p>
+                            </div>
+                            <div class="feature-item">
+                                <div class="feature-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <h5>Minimal Documentation</h5>
+                                <p class="mb-0">Simple paperwork and quick approvals</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Affordable Housing -->
+                    <div id="affordable-housing" class="product-content" style="display: none;">
+                        <h2 class="mb-4">Affordable Housing</h2>
+                        <p class="lead mb-4" style="color: var(--primary-red);">
+                            Special schemes for affordable housing projects. Government-approved rates with additional
+                            benefits for first-time buyers.
+                        </p>
+
+                        <div class="eligibility-box">
+                            <h4 class="mb-3">Special Features</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>Interest rates as per government guidelines</li>
+                                        <li>Subsidy benefits under PMAY</li>
+                                        <li>Higher loan-to-value ratio</li>
+                                        <li>Longer repayment tenure</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="document-list">
+                                        <li>Processing fee waiver</li>
+                                        <li>Insurance coverage included</li>
+                                        <li>Special women borrower rates</li>
+                                        <li>Quick sanction process</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Apply Now CTA -->
+                    <div class="text-center mt-5">
+                        <a href="contact.html" class="hero-btn" style="padding: 15px 40px; font-size: 1.1rem;">
+                            <i class="fas fa-paper-plane me-2"></i> Apply for Loan Now
+                        </a>
+                        <p class="text-muted mt-3">Our loan specialist will contact you within 24 hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header mb-5">
+                <span class="section-tag">FAQs</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about our loan products</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What documents are required for a home loan application?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>For home loans, you need: Identity proof (Aadhaar, PAN, Passport), address proof, income
+                                proof (salary slips, bank statements), property documents (sale deed, NOC), and
+                                passport-size photographs.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How long does it take to process a business loan?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Business loans are typically processed within 48-72 hours for applications up to ₹50
+                                Lakhs. For larger amounts, it may take 5-7 working days depending on document
+                                verification and collateral assessment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I prepay my loan without any charges?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, most of our loans allow prepayment without any charges after 1 year of the loan
+                                tenure. For prepayment within the first year, nominal charges may apply as per RBI
+                                guidelines.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is the minimum CIBIL score required for loan approval?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We consider applications with a CIBIL score of 650 and above. However, for secured loans
+                                like home loans and LAP, we may consider lower scores with adequate collateral and
+                                income proof.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you offer loans to self-employed individuals?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have special loan products for self-employed professionals and business owners.
+                                The documentation requirements include business registration proof, IT returns for the
+                                last 2-3 years, and business bank statements.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="services-section" style="padding: 80px 0;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="mb-3">Ready to Achieve Your Financial Goals?</h2>
+                    <p class="mb-0">Get personalized loan solutions with competitive rates and flexible terms.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="hero-btn" style="padding: 15px 40px;">
+                        <i class="fas fa-phone-alt me-2"></i> Contact Our Advisor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="logo-placeholder mb-3">
+                        <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                    </div>
+                    <p class="footer-text">
+                        Your trusted financial partner for Business Loans, Home Loans, and Personal Financial Solutions.
+                        We make finance simple, transparent, and accessible for everyone.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="services.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home-loans">Home Loans</a></li>
+                        <li><a href="#business-loans">Business Loans</a></li>
+                        <li><a href="#lap">Loan Against Property</a></li>
+                        <li><a href="#personal-loans">Personal Loans</a></li>
+                        <li><a href="#balance-transfer">Balance Transfer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Plot No. D/274, Vibhuti Khand,<br> Gomti Nagar,
+                            Lucknow,<br> Uttar Pradesh 226010</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 91514 88826</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@mudrajunction.com</p>
+                    </div>
+                    <a href="contact.html" class="hero-btn" style="padding: 12px 25px;">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p class="mb-0">
+                    © 2024 Mudra Junction Private Limited. All Rights Reserved |
+                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Product tabs functionality
+            const productTabs = document.querySelectorAll('.product-tab');
+            const productContents = document.querySelectorAll('.product-content');
+
+            productTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Remove active class from all tabs
+                    productTabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all content
+                    productContents.forEach(content => {
+                        content.style.display = 'none';
+                    });
+
+                    // Show target content
+                    const targetId = this.getAttribute('href');
+                    const targetContent = document.querySelector(targetId);
+                    if (targetContent) {
+                        targetContent.style.display = 'block';
+                    }
+                });
+            });
+
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+
+                question.addEventListener('click', function () {
+                    // Close all other FAQs
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle current FAQ
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links within page
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+
+                    if (href.startsWith('#') && href !== '#') {
+                        e.preventDefault();
+
+                        // Handle product tabs
+                        if (href.startsWith('#home-loans') ||
+                            href.startsWith('#business-loans') ||
+                            href.startsWith('#lap') ||
+                            href.startsWith('#personal-loans') ||
+                            href.startsWith('#balance-transfer') ||
+                            href.startsWith('#affordable-housing')) {
+
+                            // Find and click the corresponding tab
+                            const tab = document.querySelector(`.product-tab[href="${href}"]`);
+                            if (tab) {
+                                tab.click();
+                            }
+                        }
+
+                        // Smooth scroll to section
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

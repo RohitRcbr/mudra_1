@@ -1,0 +1,700 @@
+﻿<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mudra Junction | Your Trusted Financial Partner</title>
+
+    <!-- Bootstrap 5.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Your existing styles -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Additional styles for about page */
+        .mission-vision-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+        }
+
+        .mission-card, .vision-card, .values-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--primary-red);
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+            .mission-card:hover, .vision-card:hover, .values-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(211, 47, 47, 0.15);
+            }
+
+        .mission-card {
+            border-top-color: var(--primary-red);
+        }
+
+        .vision-card {
+            border-top-color: var(--accent-orange);
+        }
+
+        .values-card {
+            border-top-color: var(--accent-gold);
+        }
+
+        .core-value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(211, 47, 47, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+            .core-value-item:hover {
+                background: rgba(211, 47, 47, 0.1);
+                transform: translateX(5px);
+            }
+
+        .value-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--red-grad);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .governance-section {
+            background: var(--light-gray);
+            padding: 100px 0;
+        }
+
+        .policy-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-red);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+            .policy-card h5 {
+                color: var(--primary-red);
+                margin-bottom: 10px;
+            }
+
+        .journey-section {
+            position: relative;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+        }
+
+        .journey-phase {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(211, 47, 47, 0.1);
+            position: relative;
+        }
+
+        .phase-badge {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: var(--red-grad);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .statistics-box {
+            background: var(--red-grad);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 50px 0;
+        }
+
+            .statistics-box .stat-number {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+
+            .statistics-box .stat-label {
+                font-size: 1.1rem;
+                opacity: 0.9;
+            }
+
+        .director-message {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary-red);
+            margin-top: 50px;
+        }
+
+        .director-signature {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-placeholder">
+                    <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-md-center align-items-start pt-3 pt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">Calculate EMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="min-height: 60vh;">
+        <div class="container">
+            <div class="hero-content text-center text-white">
+                <h1 class="hero-title mb-4">About Mudra Junction</h1>
+                <p class="hero-subtitle mb-0" style="color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
+                    Your trusted financial partner for Business Loans, Home Loans, and Personal Financial Solutions
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Introduction -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <span class="section-tag">Our Story</span>
+                    <h2 class="section-title mb-4">Welcome to Mudra Junction</h2>
+                    <p class="lead" style="color: var(--primary-red); font-weight: 500;">
+                        Making finance simple, transparent, and accessible for everyone.
+                    </p>
+                    <p class="mb-4">
+                        At Mudra Junction, we recognize that every aspiration—be it launching a new business,
+                        expanding operations, or purchasing your dream home—requires the right financial support.
+                        That's why we offer fast loan approvals, flexible repayment options, and customized
+                        financial solutions tailored to your specific needs.
+                    </p>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="me-4">
+                            <div class="stat-value">600+</div>
+                            <div class="stat-label">Happy Customers</div>
+                        </div>
+                        <div class="me-4">
+                            <div class="stat-value">11</div>
+                            <div class="stat-label">Branches</div>
+                        </div>
+                        <div>
+                            <div class="stat-value">₹100 Cr</div>
+                            <div class="stat-label">AUM Managed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card p-4 border-0 shadow" style="background: var(--light-gray);">
+                        <h4 class="mb-4">RBI Registered NBFC</h4>
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="title-icon me-3">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Registration Details</h5>
+                                <p class="mb-0">Certificate No. B-12.00294</p>
+                            </div>
+                        </div>
+                        <p class="mb-4">
+                            Mudra Junction is a duly registered Non-Banking Financial Company (NBFC–ND)
+                            under Section 45-IA of the Reserve Bank of India Act, 1934, holding Certificate
+                            of Registration No. B-12.00294 dated March 29, 2001, issued by the Reserve Bank of India.
+                        </p>
+                        <div class="badge-container">
+                            <span class="custom-badge">MFIN Member</span>
+                            <span class="custom-badge">RBI Compliant</span>
+                            <span class="custom-badge">Transparent</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision-section">
+        <div class="container">
+            <div class="section-header mb-5">
+                <span class="section-tag">Our Philosophy</span>
+                <h2 class="section-title">Mission, Vision & Values</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="mission-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="value-icon me-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="mb-0">Our Mission</h3>
+                        </div>
+                        <p class="mb-0">
+                            At Mudra Junction, our mission is to simplify financial access by delivering tailored
+                            loan solutions with integrity, efficiency, and transparency. We strive to empower
+                            individuals and businesses through responsible financing, foster long-term relationships
+                            built on trust, leverage technology for hassle-free services, and contribute to
+                            financial inclusion by extending support to underserved segments of society.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="vision-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="value-icon me-3">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="mb-0">Our Vision</h3>
+                        </div>
+                        <p class="mb-0">
+                            To become a leading and trusted financial institution that empowers individuals and
+                            businesses to achieve their goals through innovative, transparent, and customer-centric
+                            financial solutions. We envision a future where access to finance is seamless,
+                            responsible, and inclusive — helping every customer turn aspiration into achievements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="values-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="value-icon me-3">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="mb-0">Core Values</h3>
+                        </div>
+                        <div class="core-value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Integrity</h6>
+                                <p class="mb-0 small">Upholding honesty, transparency, and ethical practices</p>
+                            </div>
+                        </div>
+                        <div class="core-value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Customer-Centricity</h6>
+                                <p class="mb-0 small">Our customers are at the heart of everything we do</p>
+                            </div>
+                        </div>
+                        <div class="core-value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Innovation</h6>
+                                <p class="mb-0 small">Embracing technology to create efficient solutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="journey-section">
+        <div class="container">
+            <div class="section-header mb-5">
+                <span class="section-tag">Growth Journey</span>
+                <h2 class="section-title">Our Journey Timeline</h2>
+                <p class="section-subtitle">From inception to becoming a trusted financial partner</p>
+            </div>
+
+            <div class="journey-phase">
+                <div class="phase-badge">May 2021 – April 2023</div>
+                <h4 class="mb-3">Foundational Years</h4>
+                <p class="mb-4">
+                    Started as a Corporate DSA for leading Fintech firms and NBFCs. Established presence
+                    across Uttar Pradesh with Personal Loans, Business Loans, and Affordable Housing Loans.
+                </p>
+                <div class="badge-container">
+                    <span class="custom-badge">₹9 Crore Business</span>
+                    <span class="custom-badge">Corporate DSA</span>
+                    <span class="custom-badge">UP Presence</span>
+                </div>
+            </div>
+
+            <div class="journey-phase">
+                <div class="phase-badge">May 2023 – March 2024</div>
+                <h4 class="mb-3">Expansion & Growth</h4>
+                <p class="mb-4">
+                    Transitioned to Lending Service Provider (LSP) partnership with Arthmate. Expanded to 8 new
+                    branches and achieved ₹100 Crore AUM in Unsecured Business Loans.
+                </p>
+                <div class="badge-container">
+                    <span class="custom-badge">₹100 Cr AUM</span>
+                    <span class="custom-badge">8 New Branches</span>
+                    <span class="custom-badge">LSP Model</span>
+                </div>
+            </div>
+
+            <div class="journey-phase">
+                <div class="phase-badge">April 2024 – Present</div>
+                <h4 class="mb-3">Diversification & Strategic Growth</h4>
+                <p class="mb-4">
+                    Expanded partnerships as Business Correspondent with Pinkcity, Samunnati, and DMI Housing Finance.
+                    Grew to 11 branches and acquired NBFC - Raghubar Automobile & General Finance Company Pvt. Ltd.
+                </p>
+                <div class="badge-container">
+                    <span class="custom-badge">11 Branches</span>
+                    <span class="custom-badge">NBFC Acquisition</span>
+                    <span class="custom-badge">Multi-Partner</span>
+                </div>
+            </div>
+
+            <div class="journey-phase" style="border-color: var(--accent-gold);">
+                <div class="phase-badge" style="background: linear-gradient(135deg, #FFA000 0%, #FF6F00 100%);">2025 & Beyond</div>
+                <h4 class="mb-3">Future Forward</h4>
+                <p class="mb-4">
+                    Building an AI-powered NBFC with focus on Secured Loans, Balance Transfer, and Unsecured
+                    Business Loans. Integrating advanced analytics for better decision-making and customer experience.
+                </p>
+                <div class="badge-container">
+                    <span class="custom-badge">AI Integration</span>
+                    <span class="custom-badge">Digital Transformation</span>
+                    <span class="custom-badge">Sustainable Growth</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestone Statistics -->
+    <section class="milestone-section">
+        <div class="container">
+            <div class="statistics-box">
+                <div class="row g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number">600+</div>
+                        <div class="stat-label text-white">Happy Customers</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number">₹64 Cr</div>
+                        <div class="stat-label text-white">Total AUM</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number">11</div>
+                        <div class="stat-label text-white">Branches</div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label text-white">State Presence</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 border-0 shadow-sm">
+                        <h4 class="mb-3" style="color: var(--primary-red);">
+                            <i class="fas fa-chart-bar me-2"></i> Disbursement Report
+                        </h4>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <div class="stat-value">₹120 Cr</div>
+                                <div class="stat-label">Total Amount Disbursed</div>
+                            </div>
+                            <div>
+                                <div class="stat-value">1000+</div>
+                                <div class="stat-label">Total Disbursements</div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Successfully serving MSMEs, entrepreneurs, and individuals across Uttar Pradesh with transparent financial solutions.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card p-4 h-100 border-0 shadow-sm">
+                        <h4 class="mb-3" style="color: var(--primary-red);">
+                            <i class="fas fa-female me-2"></i> Women Empowerment
+                        </h4>
+                        <div class="text-center mb-3">
+                            <div class="stat-value" style="font-size: 3rem;">60%</div>
+                            <div class="stat-label">Women Clients</div>
+                        </div>
+                        <p class="mb-0">Special focus on empowering women entrepreneurs with accessible financial solutions and dedicated support programs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Message -->
+    <section class="services-section">
+        <div class="container">
+            <div class="director-message">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center mb-4 mb-lg-0">
+                        <img src="assets/images/team/vijay.jpg" alt="Mr. Vijay Kumar Mishra" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+                        <h5 class="mt-3 mb-1">Mr. Vijay Kumar Mishra</h5>
+                        <p class="text-muted">Managing Director</p>
+                    </div>
+                    <div class="col-lg-9">
+                        <h3 class="mb-4">Director's Message</h3>
+                        <p class="mb-4">
+                            <strong>Welcome to Mudra Junction</strong><br><br>
+                            At Mudra Junction, we believe that <em>inclusive finance is the foundation of inclusive growth.</em>
+                        </p>
+                        <p class="mb-4">
+                            Our journey began with a simple yet powerful idea — to empower underserved segments of society,
+                            especially MSME entrepreneurs, LAP & BT customers, and rural as well as urban communities,
+                            by providing them access to affordable, transparent, and timely financial solutions.
+                        </p>
+                        <p class="mb-4">
+                            As the Managing Director, I take immense pride in leading an organization that truly puts people
+                            before profit. Every loan product we design and every process we develop is aimed at enabling
+                            self-reliance, dignity, and long-term value for our customers.
+                        </p>
+                        <div class="director-signature">
+                            <h5>Mr. Vijay Kumar Mishra</h5>
+                            <p class="text-muted mb-0">Managing Director & CEO</p>
+                            <p class="text-muted">Mudra Junction Private Limited</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Governance -->
+    <section class="governance-section">
+        <div class="container">
+            <div class="section-header mb-5">
+                <span class="section-tag">Governance</span>
+                <h2 class="section-title">Corporate Governance</h2>
+                <p class="section-subtitle">Committed to the highest standards of transparency and ethics</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="policy-card">
+                        <h5><i class="fas fa-gavel me-2"></i> Corporate Governance Principles</h5>
+                        <p class="mb-0">
+                            We operate with full transparency in all our operations, ensuring that our financials,
+                            decisions, and actions are clearly communicated to stakeholders. Our governance structure
+                            ensures that we are accountable for our performance, both socially and financially.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="policy-card">
+                        <h5><i class="fas fa-balance-scale me-2"></i> Ethical Conduct</h5>
+                        <p class="mb-0">
+                            We uphold ethical conduct in every aspect of our business, from financial reporting to
+                            customer interactions. Our management team, directors, and employees adhere to a strict
+                            code of conduct that promotes integrity, fairness, and professionalism.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="policy-card">
+                        <h5><i class="fas fa-shield-alt me-2"></i> Compliance</h5>
+                        <p class="mb-0">
+                            We comply with all applicable laws and regulations set by regulatory authorities like
+                            the Reserve Bank of India (RBI), SEBI, MFIN, and other relevant bodies. This compliance
+                            ensures transparent and responsible financial services.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="policy-card">
+                        <h5><i class="fas fa-chart-line me-2"></i> Risk Management</h5>
+                        <p class="mb-0">
+                            We maintain a robust risk management framework that identifies, assesses, and mitigates
+                            risks across operations. We continuously monitor financial, operational, and strategic
+                            risks to ensure sustainable growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="logo-placeholder mb-3">
+                        <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                    </div>
+                    <p class="footer-text">
+                        Your trusted financial partner for Business Loans, Home Loans, and Personal Financial Solutions.
+                        We make finance simple, transparent, and accessible for everyone.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="services.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#home-loans">Home Loans</a></li>
+                        <li><a href="services.html#business-loans">Business Loans</a></li>
+                        <li><a href="services.html#lap">Loan Against Property</a></li>
+                        <li><a href="services.html#personal-loans">Personal Loans</a></li>
+                        <li><a href="services.html#balance-transfer">Balance Transfer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Plot No. D/274, Vibhuti Khand,<br> Gomti Nagar, Lucknow,<br> Uttar Pradesh 226010</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 91514 88826</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@mudrajunction.com</p>
+                    </div>
+                    <a href="contact.html" class="hero-btn" style="padding: 12px 25px;">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p class="mb-0">
+                    © 2024 Mudra Junction Private Limited. All Rights Reserved |
+                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+
+                    if (href.startsWith('#')) {
+                        e.preventDefault();
+
+                        const targetElement = document.querySelector(href);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

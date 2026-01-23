@@ -1,0 +1,668 @@
+﻿<!-- team.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Mudra Junction | Experienced Leadership</title>
+
+    <!-- Bootstrap 5.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Your existing styles -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Additional styles for team page */
+        .team-hero {
+            /* background: linear-gradient(rgba(211, 47, 47, 0.9), rgba(183, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1551836026-d5c2c5af78e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center; */
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .team-category {
+            margin-bottom: 80px;
+        }
+
+        .category-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .category-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark-gray);
+            margin-bottom: 10px;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--red-grad);
+            border-radius: 2px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(211, 47, 47, 0.15);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            margin-bottom: 5px;
+        }
+
+        .team-role {
+            color: var(--primary-red);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .team-experience {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .team-qualification {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .team-description {
+            color: var(--medium-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .expertise-tag {
+            background: rgba(211, 47, 47, 0.1);
+            color: var(--primary-red);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .leadership-philosophy {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .philosophy-title {
+            color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-placeholder">
+                    <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-md-center align-items-start pt-3 pt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">Calculate EMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Hero -->
+    <section class="team-hero hero-section">
+        <div class="container">
+            <h1 class="hero-title mb-4">Meet Our Leadership Team</h1>
+            <p class="hero-subtitle mb-0" style="color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
+                Experienced professionals driving our mission of financial inclusion and empowerment
+            </p>
+        </div>
+    </section>
+
+    <!-- Board of Directors -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Leadership</span>
+                <h2 class="section-title">Board of Directors</h2>
+                <p class="section-subtitle">Strategic visionaries guiding our growth and governance</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- MD -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="assets/images/team/vijay.jpg" alt="Mr. Vijay Kumar Mishra" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">Mr. Vijay Kumar Mishra</h4>
+                            <div class="team-role">Managing Director & CEO</div>
+                            <div class="team-qualification">MBA</div>
+                            <div class="team-experience">16+ Years Experience</div>
+                            <p class="team-description">
+                                Visionary leader with expertise in Finance, Marketing, and Micro Financing.
+                                Plays a pivotal role in shaping the company's growth trajectory and long-term strategy.
+                            </p>
+                            <div class="expertise-tags">
+                                <span class="expertise-tag">Strategic Planning</span>
+                                <span class="expertise-tag">Business Development</span>
+                                <span class="expertise-tag">Leadership</span>
+                            </div>
+                            <div class="leadership-philosophy">
+                                <div class="philosophy-title">Leadership Philosophy:</div>
+                                <p class="mb-0 small">"Building an organization that puts people before profit and
+                                    empowers through financial inclusion."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Director -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="assets/images/team/dharmendra.jpg" alt="Mr. Dharmendra Kumar Singh" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">Mr. Dharmendra Kumar Singh</h4>
+                            <div class="team-role">Director & Head of Audit</div>
+                            <div class="team-qualification">M.Sc. in Physics</div>
+                            <div class="team-experience">5+ Years Experience</div>
+                            <p class="team-description">
+                                Expert in MFI management, policy development, and strategic leadership.
+                                Ensures financial discipline, transparency, and regulatory compliance across all
+                                divisions.
+                            </p>
+                            <div class="expertise-tags">
+                                <span class="expertise-tag">Audit & Compliance</span>
+                                <span class="expertise-tag">Risk Management</span>
+                                <span class="expertise-tag">Governance</span>
+                            </div>
+                            <div class="leadership-philosophy">
+                                <div class="philosophy-title">Leadership Philosophy:</div>
+                                <p class="mb-0 small">"Sound governance and ethical practices are the foundation of
+                                    sustainable growth."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CFO -->
+                <div class="col-md-4">
+                    <div class="team-card">
+                        <img src="assets/images/team/sanjeev.jpg" alt="Mr. Sanjeev Kumar Dubey" class="team-img">
+                        <div class="team-info">
+                            <h4 class="team-name">Mr. Sanjeev Kumar Dubey</h4>
+                            <div class="team-role">Chief Financial Officer</div>
+                            <div class="team-qualification">MBA, BIT & BBA</div>
+                            <div class="team-experience">18+ Years Experience</div>
+                            <p class="team-description">
+                                Expert in government banking, credit appraisal, and business expansion.
+                                Proven expertise in portfolio growth, operational compliance, and revenue enhancement.
+                            </p>
+                            <div class="expertise-tags">
+                                <span class="expertise-tag">Financial Strategy</span>
+                                <span class="expertise-tag">Credit Management</span>
+                                <span class="expertise-tag">Business Expansion</span>
+                            </div>
+                            <div class="leadership-philosophy">
+                                <div class="philosophy-title">Leadership Philosophy:</div>
+                                <p class="mb-0 small">"Financial excellence through disciplined strategy and
+                                    innovation."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management Team -->
+    <section class="services-section" style="background: var(--light-gray);">
+        <div class="container">
+            <div class="team-category">
+                <div class="category-title">
+                    <h2>Management Team</h2>
+                    <p class="section-subtitle">Seasoned professionals leading key business functions</p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- COO -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/amir.jpg" alt="Amir Akhtar Farooqui" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Amir Akhtar Farooqui</h4>
+                                <div class="team-role">Chief Operating Officer</div>
+                                <div class="team-qualification">MBA</div>
+                                <div class="team-experience">15+ Years Experience</div>
+                                <p class="team-description">
+                                    15 years of experience in strategizing sales plans that drive revenue and
+                                    profitability,
+                                    while improving operational efficiency. Oversees the credit process and ensures
+                                    informed
+                                    decisions on exception pricing.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Operations</span>
+                                    <span class="expertise-tag">Sales Strategy</span>
+                                    <span class="expertise-tag">Credit Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Head of IT -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/dileep.jpg" alt="Mr. Dileep Kumar" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Dileep Kumar</h4>
+                                <div class="team-role">Head of Information Technology</div>
+                                <div class="team-qualification">MBA-IT</div>
+                                <div class="team-experience">15+ Years Experience</div>
+                                <p class="team-description">
+                                    Dynamic technology professional with extensive experience in IT infrastructure,
+                                    digital transformation, and software implementation. Leads digital innovation
+                                    initiatives and ensures data security.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Digital Transformation</span>
+                                    <span class="expertise-tag">Cybersecurity</span>
+                                    <span class="expertise-tag">IT Infrastructure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HR Manager -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/neha.jpg" alt="Miss Neha Pandey" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Miss Neha Pandey</h4>
+                                <div class="team-role">HR Manager</div>
+                                <div class="team-qualification">B.Com</div>
+                                <div class="team-experience">6+ Years Experience</div>
+                                <p class="team-description">
+                                    Passionate HR professional with expertise in recruitment, employee engagement,
+                                    and performance management. Committed to building a strong workplace culture
+                                    and aligning people strategies with organizational goals.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">HR Management</span>
+                                    <span class="expertise-tag">Talent Acquisition</span>
+                                    <span class="expertise-tag">Employee Engagement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Head of Collections -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/ashish.jpg" alt="Mr. Ashish Singh" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Ashish Singh</h4>
+                                <div class="team-role">Head of Collections</div>
+                                <div class="team-qualification">B.Sc</div>
+                                <div class="team-experience">6+ Years Experience</div>
+                                <p class="team-description">
+                                    Performance-driven professional known for expertise in credit risk management,
+                                    recovery operations, and collection strategy. Has successfully built high-performing
+                                    teams and improved recovery efficiency.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Collections</span>
+                                    <span class="expertise-tag">Risk Management</span>
+                                    <span class="expertise-tag">Recovery Operations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- State Head -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/durgesh.jpg" alt="Mr. Durgesh Gupta" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Durgesh Gupta</h4>
+                                <div class="team-role">State Head – Sales & Operations</div>
+                                <div class="team-experience">16+ Years Experience</div>
+                                <p class="team-description">
+                                    Result-oriented leader known for driving business growth through strategic sales
+                                    initiatives and strong operational excellence. Deep understanding of retail and
+                                    MSME finance with a customer-centric approach.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Sales Leadership</span>
+                                    <span class="expertise-tag">Operations</span>
+                                    <span class="expertise-tag">Business Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Head Secure Loans -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/gaurav.jpg" alt="Mr. Gaurav" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Gaurav</h4>
+                                <div class="team-role">Business Head of Secure Loan</div>
+                                <div class="team-qualification">B.Com</div>
+                                <div class="team-experience">14+ Years Experience</div>
+                                <p class="team-description">
+                                    Seasoned finance professional specializing in Loan Against Property (LAP),
+                                    Home Loans, and Balance Transfers. Strong background in sales, credit appraisal,
+                                    and portfolio management.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Secure Loans</span>
+                                    <span class="expertise-tag">LAP</span>
+                                    <span class="expertise-tag">Home Loans</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Head Unsecure Loans -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/dinesh.jpg" alt="Mr. Dinesh" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Dinesh</h4>
+                                <div class="team-role">Business Head of Unsecure Loan</div>
+                                <div class="team-qualification">B.Com</div>
+                                <div class="team-experience">16+ Years Experience</div>
+                                <p class="team-description">
+                                    Accomplished professional specializing in Unsecured Business Loans, Personal Loans,
+                                    and MSME Financing. Expertise in credit assessment, sales strategy, and risk
+                                    management.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Unsecured Loans</span>
+                                    <span class="expertise-tag">MSME Finance</span>
+                                    <span class="expertise-tag">Risk Assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Head of Administration -->
+                    <div class="col-md-4">
+                        <div class="team-card">
+                            <img src="assets/images/team/navneet.jpg" alt="Mr. Navneet Tiwari" class="team-img">
+                            <div class="team-info">
+                                <h4 class="team-name">Mr. Navneet Tiwari</h4>
+                                <div class="team-role">Head of Administration</div>
+                                <div class="team-qualification">B.Com</div>
+                                <div class="team-experience">8+ Years Experience</div>
+                                <p class="team-description">
+                                    Strong expertise in administration, facility management, and organizational
+                                    operations
+                                    within the NBFC sector. Plays a vital role in streamlining internal processes and
+                                    ensuring workplace efficiency.
+                                </p>
+                                <div class="expertise-tags">
+                                    <span class="expertise-tag">Administration</span>
+                                    <span class="expertise-tag">Facility Management</span>
+                                    <span class="expertise-tag">Operations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Culture -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <span class="section-tag">Our Culture</span>
+                    <h2 class="section-title mb-4">Why Work With Us</h2>
+                    <p class="mb-4">
+                        At Mudra Junction, we foster a workplace where people can grow professionally and feel
+                        valued as they contribute to a greater cause. Our team culture is built on collaboration,
+                        innovation, and shared success.
+                    </p>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="me-3">
+                            <div class="title-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-users"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Collaborative Environment</h5>
+                            <p class="mb-0">We believe in teamwork and mutual support across all departments.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="me-3">
+                            <div class="title-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Continuous Learning</h5>
+                            <p class="mb-0">Regular training and development opportunities for all team members.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="me-3">
+                            <div class="title-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Growth Opportunities</h5>
+                            <p class="mb-0">Clear career paths and promotion opportunities based on performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card p-4 border-0 shadow" style="background: var(--light-gray);">
+                        <h4 class="mb-4">Join Our Team</h4>
+                        <p class="mb-4">
+                            We are always looking for talented, passionate individuals who share our values and
+                            are eager to contribute to our mission of providing affordable financial solutions
+                            to underserved populations.
+                        </p>
+                        <div class="badge-container mb-4">
+                            <span class="custom-badge">Integrity</span>
+                            <span class="custom-badge">Innovation</span>
+                            <span class="custom-badge">Customer-Centricity</span>
+                            <span class="custom-badge">Empowerment</span>
+                            <span class="custom-badge">Collaboration</span>
+                        </div>
+                        <a href="careers.html" class="hero-btn">
+                            View Careers <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="logo-placeholder mb-3">
+                        <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                    </div>
+                    <p class="footer-text">
+                        Your trusted financial partner for Business Loans, Home Loans, and Personal Financial Solutions.
+                        We make finance simple, transparent, and accessible for everyone.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="services.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#home-loans">Home Loans</a></li>
+                        <li><a href="services.html#business-loans">Business Loans</a></li>
+                        <li><a href="services.html#lap">Loan Against Property</a></li>
+                        <li><a href="services.html#personal-loans">Personal Loans</a></li>
+                        <li><a href="services.html#balance-transfer">Balance Transfer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Plot No. D/274, Vibhuti Khand,<br> Gomti Nagar,
+                            Lucknow,<br> Uttar Pradesh 226010</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 91514 88826</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@mudrajunction.com</p>
+                    </div>
+                    <a href="contact.html" class="hero-btn" style="padding: 12px 25px;">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p class="mb-0">
+                    © 2024 Mudra Junction Private Limited. All Rights Reserved |
+                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

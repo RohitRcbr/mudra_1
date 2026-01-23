@@ -1,0 +1,600 @@
+﻿<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Mudra Junction | Get in Touch</title>
+
+    <!-- Bootstrap 5.1 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Your existing styles -->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Additional styles for contact page */
+        .contact-hero {
+            /* background: linear-gradient(rgba(211, 47, 47, 0.9), rgba(183, 28, 28, 0.9)), url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center; */
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .contact-form-section {
+            padding: 100px 0;
+            background: var(--light-gray);
+        }
+
+        .contact-form-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-control,
+        .form-select {
+            border: 2px solid rgba(211, 47, 47, 0.1);
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 0.25rem rgba(211, 47, 47, 0.25);
+        }
+
+        .contact-info-section {
+            padding: 100px 0;
+        }
+
+        .contact-info-card {
+            background: var(--red-grad);
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            height: 100%;
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .branches-section {
+            background: var(--light-gray);
+            padding: 100px 0;
+        }
+
+        .branch-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-placeholder">
+                    <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-md-center align-items-start pt-3 pt-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Our Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calculator.html">Calculate EMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active contact-btn" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero hero-section">
+        <div class="container">
+            <h1 class="hero-title mb-4">Get in Touch With Us</h1>
+            <p class="hero-subtitle mb-0" style="color: rgba(255,255,255,0.9); max-width: 800px; margin: 0 auto;">
+                Ready to achieve your financial goals? Our team is here to help you with personalized loan solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="contact-form-card">
+                        <div class="section-header text-center mb-5">
+                            <span class="section-tag">Quick Application</span>
+                            <h2 class="section-title">Apply for Loan Online</h2>
+                            <p class="section-subtitle">Fill this form and our representative will contact you within 24
+                                hours</p>
+                        </div>
+
+                        <form id="loanApplicationForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="City" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" required>
+                                        <option value="">Select Loan Type</option>
+                                        <option value="home">Home Loan</option>
+                                        <option value="business">Business Loan</option>
+                                        <option value="lap">Loan Against Property</option>
+                                        <option value="personal">Personal Loan</option>
+                                        <option value="balance-transfer">Balance Transfer</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select" required>
+                                        <option value="">Loan Amount</option>
+                                        <option value="5l">Up to ₹5 Lakhs</option>
+                                        <option value="10l">₹5-10 Lakhs</option>
+                                        <option value="25l">₹10-25 Lakhs</option>
+                                        <option value="50l">₹25-50 Lakhs</option>
+                                        <option value="1cr">₹50 Lakhs - 1 Crore</option>
+                                        <option value="above1cr">Above ₹1 Crore</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="4"
+                                        placeholder="Additional Requirements (Optional)"></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check mb-4">
+                                        <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            I agree to the <a href="terms.html">Terms & Conditions</a> and <a
+                                                href="privacy-policy.html">Privacy Policy</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="hero-btn" style="padding: 15px 50px;">
+                                        <i class="fas fa-paper-plane me-2"></i> Submit Application
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Contact Information</h2>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 class="mb-3">Head Office</h4>
+                        <p class="mb-0">
+                            Plot No. D/274, Vibhuti Khand,<br>
+                            Gomti Nagar, Lucknow,<br>
+                            Uttar Pradesh 226010
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4 class="mb-3">Phone & Email</h4>
+                        <p class="mb-3">
+                            <strong>Phone:</strong><br>
+                            +91 91514 88826
+                        </p>
+                        <p class="mb-0">
+                            <strong>Email:</strong><br>
+                            info@mudrajunction.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4 class="mb-3">Business Hours</h4>
+                        <p class="mb-3">
+                            <strong>Monday - Friday:</strong><br>
+                            9:30 AM - 6:30 PM
+                        </p>
+                        <p class="mb-0">
+                            <strong>Saturday:</strong><br>
+                            10:00 AM - 4:00 PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches -->
+    <section class="branches-section">
+        <div class="container">
+            <div class="section-header text-center mb-5">
+                <span class="section-tag">Our Network</span>
+                <h2 class="section-title">Our Branches</h2>
+                <p class="section-subtitle">Visit us at any of our 11 branches across Uttar Pradesh</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="branch-card">
+                        <h5 class="mb-3">Lucknow (Head Office)</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary-red"></i>
+                            Plot No. D/274, Vibhuti Khand, Gomti Nagar, Lucknow - 226010
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone me-2 text-primary-red"></i>
+                            +91 91514 88826
+                        </p>
+                    </div>
+
+                    <div class="branch-card">
+                        <h5 class="mb-3">Varanasi Branch</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary-red"></i>
+                            Near Lanka Crossing, Varanasi - 221005
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone me-2 text-primary-red"></i>
+                            +91 XXXXX XXXXX
+                        </p>
+                    </div>
+
+                    <div class="branch-card">
+                        <h5 class="mb-3">Kanpur Branch</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary-red"></i>
+                            Civil Lines, Kanpur - 208001
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone me-2 text-primary-red"></i>
+                            +91 XXXXX XXXXX
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="branch-card">
+                        <h5 class="mb-3">Agra Branch</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary-red"></i>
+                            Near Sadar Bazar, Agra - 282001
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone me-2 text-primary-red"></i>
+                            +91 XXXXX XXXXX
+                        </p>
+                    </div>
+
+                    <div class="branch-card">
+                        <h5 class="mb-3">Prayagraj Branch</h5>
+                        <p class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2 text-primary-red"></i>
+                            Civil Lines, Prayagraj - 211001
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-phone me-2 text-primary-red"></i>
+                            +91 XXXXX XXXXX
+                        </p>
+                    </div>
+
+                    <div class="branch-card">
+                        <h5 class="mb-3">Other Locations</h5>
+                        <p class="mb-0">
+                            We also have branches in: Gorakhpur, Jhansi, Bareilly, Meerut,
+                            Moradabad, and Saharanpur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.6829103062515!2d80.94371171504303!3d26.82040058316818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f32b16b%3A0x93ccba8909978be7!2sGomti%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grievance Redressal -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <span class="section-tag">Support</span>
+                    <h2 class="section-title mb-4">Grievance Redressal</h2>
+                    <p class="mb-4">
+                        We value your feedback and are committed to resolving any concerns promptly.
+                        Our grievance redressal mechanism ensures fair and transparent resolution.
+                    </p>
+
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="me-3">
+                            <div class="title-icon" style="width: 50px; height: 50px;">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h5>Grievance Redressal Officer</h5>
+                            <p class="mb-1"><strong>Miss Neha Pandey</strong></p>
+                            <p class="mb-2">Email: info@mudrajunction.com</p>
+                            <p class="mb-0">Phone: +91 91514 88826</p>
+                        </div>
+                    </div>
+
+                    <a href="mailto:info@mudrajunction.com" class="hero-btn">
+                        <i class="fas fa-envelope me-2"></i> Email Your Concern
+                    </a>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card p-4 border-0 shadow" style="background: var(--light-gray);">
+                        <h4 class="mb-4">Complaint Resolution Process</h4>
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="title-icon" style="width: 40px; height: 40px; font-size: 16px;">
+                                    1
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Register Complaint</h6>
+                                <p class="mb-0 small">Submit your complaint at the branch or via email/phone</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="title-icon" style="width: 40px; height: 40px; font-size: 16px;">
+                                    2
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Acknowledgement</h6>
+                                <p class="mb-0 small">Receive acknowledgement within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <div class="title-icon" style="width: 40px; height: 40px; font-size: 16px;">
+                                    3
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Investigation</h6>
+                                <p class="mb-0 small">Our team investigates and provides resolution within 7 days</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start">
+                            <div class="me-3">
+                                <div class="title-icon" style="width: 40px; height: 40px; font-size: 16px;">
+                                    4
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Final Resolution</h6>
+                                <p class="mb-0 small">If unsatisfied, escalate to Grievance Redressal Officer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="logo-placeholder mb-3">
+                        <img src="assets/images/logo-dark.png" class="img-fluid" width="250" alt="Mudra Junction">
+                    </div>
+                    <p class="footer-text">
+                        Your trusted financial partner for Business Loans, Home Loans, and Personal Financial Solutions.
+                        We make finance simple, transparent, and accessible for everyone.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="services.html">Our Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#home-loans">Home Loans</a></li>
+                        <li><a href="services.html#business-loans">Business Loans</a></li>
+                        <li><a href="services.html#lap">Loan Against Property</a></li>
+                        <li><a href="services.html#personal-loans">Personal Loans</a></li>
+                        <li><a href="services.html#balance-transfer">Balance Transfer</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="footer-heading">Contact Info</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Plot No. D/274, Vibhuti Khand,<br> Gomti Nagar,
+                            Lucknow,<br> Uttar Pradesh 226010</p>
+                        <p><i class="fas fa-phone me-2"></i> +91 91514 88826</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@mudrajunction.com</p>
+                    </div>
+                    <a href="contact.html" class="hero-btn" style="padding: 12px 25px;">
+                        Apply Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <div class="container">
+                <p class="mb-0">
+                    © 2024 Mudra Junction Private Limited. All Rights Reserved |
+                    <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Form submission
+            const loanApplicationForm = document.getElementById('loanApplicationForm');
+            if (loanApplicationForm) {
+                loanApplicationForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Simple form validation
+                    const requiredFields = this.querySelectorAll('[required]');
+                    let isValid = true;
+
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('is-invalid');
+                        } else {
+                            field.classList.remove('is-invalid');
+                        }
+                    });
+
+                    if (isValid) {
+                        // Show success message
+                        alert('Thank you for your application! Our representative will contact you within 24 hours.');
+                        this.reset();
+                    } else {
+                        alert('Please fill in all required fields.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
